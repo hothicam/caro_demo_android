@@ -7,24 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
- Button btn1,btn2,btn3;
+public class login extends AppCompatActivity {
+   Button btcomBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
+        setContentView(R.layout.activity_login);
 
+        btcomBack = findViewById(R.id.comback);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btcomBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, login.class);
+                Intent intent = new Intent(login.this, MainActivity.class);
                 startActivity(intent);
-
             }
         });
+
     }
 }
